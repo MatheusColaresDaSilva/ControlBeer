@@ -16,5 +16,3 @@ Foi desenvolvido utilizando Arduino e com ele é possível:
  - Sensor de Temperatura DS18B20;
  - Relé SSR;
  - Buzzer;
- 
-## Portas
