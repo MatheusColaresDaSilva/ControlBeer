@@ -260,7 +260,7 @@ void etapaFervura(EtapaQuente etapa[],Lupulos lupulo[], int tam){
          
         mostrarTemperatura();
         mostrarTempAlvo(etapa[stepFervura].tempMax);
-        controlResistenceFervura(getTemperature(),etapa[stepFervura].tempMin,etapa[stepFervura].tempMax, etapa[stepFervura].duracao);
+        controlResistenceFervura(getTemperature(),etapa[stepFervura].tempMin,etapa[stepFervura].tempMax);
 
           if(_alarmeAtivo){
             if(!_alarmeAtivoHop){
@@ -332,7 +332,7 @@ void controlResistenceTempInicial(float tempSensor, float tempMin, float tempMax
   }
 }
 
-void controlResistenceFervura(float tempSensor, float tempMin, float tempMax, int duracao ){
+void controlResistenceFervura(float tempSensor, float tempMin, float tempMax){
   if(tempSensor < tempMax && _statusResistencia){
     digitalWrite(RELE_RESISTENCIA, HIGH); //Liga rele
   }

@@ -527,11 +527,11 @@ void modoManual(){
             lcd.print("Modo");
             lcd.setCursor(0,1);
             lcd.print("Manual");
-            mostrarTempAlvo(temperatura);
-
+            
             ligaBombaRecirculacao();
+            mostrarTempAlvo(temperatura);
             mostrarTemperatura();
-            controlResistenceTempInicial(getTemperature(),(temperatura - _variacaoMinima), temperatura);  
+            controlResistenceFervura(getTemperature(),(temperatura - _variacaoMinima), temperatura);  
           }
        }
   } 
