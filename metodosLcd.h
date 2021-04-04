@@ -531,7 +531,7 @@ void modoManual(){
             ligaBombaRecirculacao();
             mostrarTempAlvo(temperatura);
             mostrarTemperatura();
-            controlResistenceFervura(getTemperature(),(temperatura - _variacaoMinima), temperatura);  
+            controlResistence(getTemperature(),(temperatura - _variacaoMinima), temperatura);  
           }
        }
   } 

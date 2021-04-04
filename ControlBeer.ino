@@ -295,7 +295,7 @@ void etapaMostura(EtapaQuente etapa[],int tam){
   
 }
 
-void controlResistence(float tempSensor, float tempMin, float tempMax, int duracao ){
+void controlResistence(float tempSensor, float tempMin, float tempMax){
   if(tempSensor < tempMax && _statusResistencia){
     digitalWrite(RELE_RESISTENCIA, HIGH); //Liga rele
   }
@@ -348,6 +348,7 @@ void controlResistenceFervura(float tempSensor, float tempMin, float tempMax){
   }
 }
 
+
 void mash(EtapaQuente etapa[],int i){
 
          if(_alarmeAtivo){
@@ -359,7 +360,7 @@ void mash(EtapaQuente etapa[],int i){
         lcd.setCursor(10,0);
         mostrarTempAlvo(etapa[_step-1].tempMax);
          
-        controlResistence(getTemperature(),etapa[i-1].tempMin,etapa[i-1].tempMax, etapa[i-1].duracao);   
+        controlResistence(getTemperature(),etapa[i-1].tempMin,etapa[i-1].tempMax);   
 }
 
 void adicionarMaltesMostura(){
